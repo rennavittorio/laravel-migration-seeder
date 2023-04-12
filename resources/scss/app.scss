@@ -1,1 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.grid-dis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    .card {
+        background-color: #f3f3f3;
+        color: #333;
+        padding: 10px;
+        min-height: 350px;
+
+        .vote {
+            color: orangered;
+            font-weight: 700;
+        }
+    }
+
+}
+

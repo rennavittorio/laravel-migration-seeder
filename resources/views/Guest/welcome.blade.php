@@ -20,7 +20,29 @@
     <main class="main">
         <div class="container p-5">
 
-            content here... 
+            <h1 class="text-center text-white fs-1">
+                Mi piacciono i treni
+            </h1>
+    
+            <ul class="grid-dis mt-3">
+        
+                @foreach ($trains as $train)
+            
+                    <div class="card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"> {{ $train->company }} </h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">  </h6>
+                            <p class="card-text mt-auto">  </p>
+                            <div class="info-wrapper">
+                                <div class="card-info"> Dep: {{ $train->departure_time }} </div>
+                                <div class="card-info vote"> Arr: {{ $train->arrival_time }} </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                @endforeach
+        
+            </ul>
 
         </div>
     </main>
